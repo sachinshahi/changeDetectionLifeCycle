@@ -1,0 +1,21 @@
+<!--<a routerLink="/app1">App 1</a>
+<a routerLink="/app2">App 2</a>
+<router-outlet></router-outlet>
+<br>
+<br>-->
+Parent Counter: {{data.counter}}
+<button (click)="fetch()">Parent Fetch</button>
+<button (click)="increment()">Parent Increment</button>
+<button (click)="changeSec()">Change Secondary</button>
+<button (click)="test()">Parent Test</button>
+<br>
+<br>
+<br>
+<app-child [secondary]="secondary" [data]="data" [http$]="http$"></app-child>
+<!--
+<app-child1 [secondary]="secondary" [data]="data" [http$]="http$">
+  <h1>
+    hello
+  </h1>
+</app-child1>
+-->

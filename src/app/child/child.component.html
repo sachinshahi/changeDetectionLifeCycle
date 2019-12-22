@@ -1,0 +1,12 @@
+Child Counter: {{data.counter}}
+
+
+<button (click)="test()">Child Refresh</button>
+<br/>
+child server Data1: {{data1 | json}}
+
+<button (click)="fetch()">Child fetch</button>
+functioncall:{{functioncall()}}
+Child Observable: {{http$  | async}}
+
+Child Observable-1: {{http$2  | async}}
