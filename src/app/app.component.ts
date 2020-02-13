@@ -1,13 +1,13 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Subject} from 'rxjs';
 
-@Component(N
+@Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'my-app';
   http: Subject<any> = new Subject<any>();
   http$ =  this.http.asObservable();
@@ -15,6 +15,8 @@ export class AppComponent {
     counter: 0
   };
   secondary = 1;
+
+  @ViewChild('divRef', {static: true}) divEl: ElementRef;
 
   constructor(private  httpClient: HttpClient) {
 
@@ -47,6 +49,11 @@ export class AppComponent {
     this.httpClient.get('http://localhost:3000/datas').subscribe(d => {
       console.log('data1');
     });
+  }
+
+  ngOnInit(): void {
+    console.log('ViewChild demo of static true and false' + this.divEl.nativeElement.textContent);
+    console.log(this.divEl.nativeElement);
   }
 }
 

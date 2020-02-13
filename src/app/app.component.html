@@ -3,7 +3,7 @@
 <router-outlet></router-outlet>
 <br>
 <br>-->
-Parent Counter: {{data.counter}}
+<!--Parent Counter: {{data.counter}}
 <button (click)="fetch()">Parent Fetch</button>
 <button (click)="increment()">Parent Increment</button>
 <button (click)="changeSec()">Change Secondary</button>
@@ -11,11 +11,16 @@ Parent Counter: {{data.counter}}
 <br>
 <br>
 <br>
-<app-child [secondary]="secondary" [data]="data" [http$]="http$"></app-child>
-<!--
+<app-child [secondary]="secondary" [data]="data" [http$]="http$"></app-child>-->
+<!--Below code for lifecycle-->
 <app-child1 [secondary]="secondary" [data]="data" [http$]="http$">
   <h1>
     hello
   </h1>
 </app-child1>
--->
+<div #divRef>text hello world</div>
+<!--Below code of Ngzone--->
+<app-ngzone-test></app-ngzone-test>
+<!----->
+<!---------------->
+<app1></app1><!---------------->

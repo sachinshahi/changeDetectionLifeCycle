@@ -9,13 +9,19 @@ import { ChildComponent } from './child/child.component';
 import {HttpClientModule} from '@angular/common/http';
 import { Child1Component } from './child1/child1.component';
 import { NestedlifecycleComponent } from './nestedlifecycle/nestedlifecycle.component';
+import { NgzoneTestComponent } from './ngzone-test/ngzone-test.component';
+import {App1, GiantList, MyChangeDetectComponent} from './MyChangeDetect';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChildComponent,
     Child1Component,
-    NestedlifecycleComponent
+    NestedlifecycleComponent,
+    NgzoneTestComponent,
+    MyChangeDetectComponent,
+    GiantList,
+    App1
   ],
   imports: [
     BrowserModule,

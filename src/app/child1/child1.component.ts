@@ -23,7 +23,9 @@ export class Child1Component implements OnInit, OnChanges, DoCheck,
   @Input() secondary: number;
   @Input() http$: Observable<any>;
 
-  constructor() { }
+  constructor() {
+    console.log('parentchild construtor');
+  }
 
   ngOnInit() {
     console.log('parentchild onInit');
